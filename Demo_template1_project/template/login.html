@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="orange">
+<center><h1>welcome to Login page</h1></center>
+<font face="verdana" size="3">
+    <a href="{%url 'home'%}">Home_page</a>&nbsp;&nbsp;
+    <a href="{%url 'reg'%}">Registration_page</a>&nbsp;&nbsp;
+  <a href="{%url 'login' %}">Login_page</a>&nbsp;&nbsp;
+</font>
+
+<form action="{% url 'readlogin'%}" method="get">
+    {%csrf_token%}
+    <label>Enter the user-name</label>
+    <input type="text" name="uname"><br><br>
+
+     <label>Enter the Password</label>
+    <input type="password" name="pname"><br><br>
+
+    <input type="submit" value="log-in">
+
+</form>
+</body>
+</html>

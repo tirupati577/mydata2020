@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="orange">
+<center><h1>welcome to Registration page</h1></center>
+<font face="verdana" size="3">
+    <a href="{%url 'home'%}">Home_page</a>&nbsp;&nbsp;
+    <a href="{%url 'reg'%}">Registration_page</a>&nbsp;&nbsp;
+    <a href="{%url 'login' %}">Login_page</a>&nbsp;&nbsp;
+</font>
+
+
+<div class="container" align="center">
+
+    <h1>Enter the student Details</h1>
+    <form action="{%url 'datapost'%}" method="post">
+        {%csrf_token%}
+
+        <label>Enter the student Roll number</label>
+        <input type="number" name="rollno"><br><br>
+
+        <label>Enter the student Name</label>
+        <input type="text" name="sname"><br><br>
+
+        <label>Enter the student Marks</label>
+        <input type="number" name="marks"><br><br>
+
+        <label>Enter Date Of Birth</label>
+        <input type="date" name="date"><br><br>
+
+
+        <label>Enter Gender</label>
+        <input type="radio" name="gender" value="Male" checked>Male&nbsp;
+        <input type="radio" name="gender" value="Female">Female&nbsp;
+        <input type="radio" name="gender" value="other">Other<br><br>
+
+        <label>Qualification</label>
+        <input type="checkbox" name="checkbox1" value="Btech">BTECH
+        <input type="checkbox" name="checkbox2" value="Degree">DEGREE
+        <input type="checkbox" name="checkbox3" value="MCA">MCA<br><br>
+
+        <label >select city </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="city">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Nagur">Nagur</option>
+        <option value="delhi">delhi</option>
+        </select><br><br>
+
+         <label>Enter Address</label><br>
+        <textarea rows="3" cols="25" name="address"></textarea><br><br>
+
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+
+
+</form>
+</div>
+ </body>
+</html>
